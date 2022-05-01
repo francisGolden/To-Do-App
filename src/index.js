@@ -101,7 +101,7 @@ const showItems = () => {
         newRow.innerHTML += `<div class="colonnina" id="box-${property}">${property}<br><div id="${property}-content" class="box-contents">${item[property]}</div></div>`
     }
 
-    newRow.innerHTML += `<button class="delete"><img id="deleteImg" src="/src/a76fb506077d2141063f0cd2e2cb514d.svg">`
+    newRow.innerHTML += `<button class="delete">Delete</button>`
     newRow.innerHTML += `<button class="edit" style="font-weight: bold" id="edit">Edit</button>`
     newRow.innerHTML += `<button id="expand" style="font-weight: bold">See description</button>`
     
