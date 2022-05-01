@@ -1,0 +1,601 @@
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 20px;
+    
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+    grid-template-rows: 1fr 15fr;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+#header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #DB4C3F;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+#left-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: left;
+    
+}
+
+#center {
+    justify-self: center;
+}
+
+#right-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: right;
+    
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 7px;
+}
+
+#form {
+    display: grid;
+    grid-template-columns: 3.5fr 1.3fr 1.6fr;
+    grid-template-rows: 1fr 1.5fr 1fr 1fr;
+    font-size: 15px;
+    border-radius: 4px;
+    min-width: 350px;
+    gap: 6px;
+    background-color: transparent;
+    align-items: center;
+}
+
+#formEdit {
+    display: grid;
+    grid-template-columns: 3.5fr 1fr 1.6fr;
+    grid-template-rows: 1fr 1.5fr 1fr 1fr;
+    font-size: 15px;
+    border-radius: 4px;
+    gap: 10px;
+    background-color: #FAFAFA;
+    align-items: center;
+}
+
+#cancel {
+    background-color: #FAFAFA;
+    color: #DB4C3F;
+    border: 0;
+    padding: 6px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.2s;
+    opacity: .9;
+}
+
+#cancel:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#cancelEdit {
+    background-color: #FAFAFA;
+    color: #DB4C3F;
+    border: 0;
+    padding: 6px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.2s;
+    opacity: .9;
+}
+
+#cancel:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#buttons {
+    display: flex;
+    gap: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#buttonsEdit {
+    display: flex;
+    gap: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#submit {
+    background-color:#DB4C3F;
+    color:#FAFAFA;
+    width: fit-content;
+    border: 0;
+    padding: 6px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 2px;
+    transition: 0.2s;
+    align-self: center;
+}
+
+
+#submitEdit {
+    background-color:#4158D0;
+    color:#FAFAFA;
+    width: fit-content;
+    border: 0;
+    padding: 6px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 2px;
+    transition: 0.2s;
+    align-self: center;
+}
+
+#cancelEdit {
+    color: #4158D0;
+    cursor: pointer;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+#submitEdit:hover {
+    cursor: pointer;
+}
+
+form input {
+    padding: 3px;
+    border-radius: 5px;
+    border: 0;
+    background-color: transparent;
+    font-size: 20px;
+    color: black;
+    transition: 0.2s;
+    width: 99%;
+    
+}
+
+#formEdit input {
+    padding: 3px;
+    border-radius: 5px;
+    border: 0;
+    background-color: transparent;
+    font-size: 20px;
+    color: black;
+    transition: 0.2s;
+    width: 99%;
+    
+}
+
+#dueDate {
+    grid-row-start: 3;
+    width: 170px;
+}
+
+#dueDateEdit {
+    grid-row-start: 3;
+    width: 170px;
+}
+
+#label {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    justify-items: center;
+}
+
+#labelEdit {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    justify-items: center;
+}
+
+#label-icon {
+    width: 20px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+#priority {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    font-size: 15px;
+    align-self: center;
+    border: 1;
+    padding: 5px;
+}
+
+#priorityEdit {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    font-size: 15px;
+    align-self: center;
+    border: 1;
+    padding: 5px;
+}
+
+#label {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+}
+
+#labelEdit {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+}
+
+input:focus {
+    outline: none !important;
+    border: 0;
+}
+
+#titleSearch {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#titleSearchEdit {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#descriptionSearch {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 15vh;
+    border-radius: 5px;
+    align-self: baseline;
+    
+}
+
+#descriptionSearchEdit {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 15vh;
+    border-radius: 5px;
+    align-self: baseline;
+    
+}
+
+#todo-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+textarea {
+    min-height: 50px;
+    min-width: 200px;
+    max-height: 80px;
+    max-width: 400px;
+    background-color: transparent;
+    font-style: inherit;
+}
+
+#sidebar {
+    background-color: #FAFAFA;
+    padding: 7px;
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+
+.section {
+    border: 0;
+}
+
+#modal {
+    max-width: 50ch;
+    min-width: 350px;
+    transition: 0.5s;
+    border: 0;
+    border-radius: 7px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #FAFAFA;
+    
+}
+
+
+    
+
+
+#modal::backdrop {
+    background-color: black;
+    opacity: .5;
+}
+
+#modalEdit {
+    max-width: 50ch;
+    transition: 0.5s;
+    border: 0;
+    border-radius: 7px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #FAFAFA;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+
+#modalEdit::backdrop {
+    background-color: black;
+    opacity: .5;
+}
+
+#add-task {
+    color: #DB4C3F;
+    background-color: white;
+    border: 0;
+    justify-self: center;
+    border-radius: 2px;
+    transition: .3s;
+    font-size: 30px;
+    width: 2.5ch;
+}
+
+#add-task:hover {
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#labelsAll {
+    cursor: pointer;
+}
+
+#labelLink {
+    cursor: pointer;
+}
+
+
+
+/* task */
+.rowClass {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.3fr 0.3fr 0.3fr;
+    font-size: 15px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 40vh;
+    padding: 15px;
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+#box-title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+
+#title {
+    overflow: hidden;
+}
+
+
+#box-description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: none;
+}
+
+
+#box-label {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    
+}
+
+
+
+
+
+#dueDate {
+    overflow: hidden;
+}
+
+#priority {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#label {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.rowClass button:hover {
+    opacity: .8;
+}
+
+#deleteImg {
+    width: 20px;
+    height: 20px;
+}
+
+
+.delete:hover {
+    cursor: pointer;
+}
+
+.edit {
+    
+    background-color: white;
+    border-radius: 0px;
+    color: black;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    grid-row-start: 3;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.edit:hover {
+    cursor: pointer;
+}
+
+#expand {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+    padding: 0;
+    background-color:#4B7BE5;
+    color: white;
+    cursor: pointer;
+    width: 200%;
+    height: 100%;
+    
+}
+
+
+#shrink {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    min-width: fit-content;
+}
+
+.colonnina {
+    
+    font-size: 15px;
+    min-width: fit-content;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.box-contents { 
+    
+    background-color: transparent;
+    border: 1px solid black;
+    overflow: hidden;
+    height: 70%;
+    max-width: 100%;
+    min-height: fit-content;
+    justify-content: center;
+    word-break: break-word;
+    box-sizing: border-box;
+    transition: .2s;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-family: "Open sans"
+}
+
+.delete {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background-color: #DB4C3F;
+    color: white;
+    width: 100%;
+    max-height: fit-content;
+    border: 1px solid black;
+    border-radius: 0;
+    min-height: 100%;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+
+#description-content {
+    word-break:unset;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 600px) {
+
+    dialog {
+        width: 350px;
+    }
+    
+    #form {
+        grid-template-rows: 1fr 1.5fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 360px;
+    }
+
+    #formEdit {
+        grid-template-rows: 1fr 1.5fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 350px;
+    }
+
+    #label {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+
+    #labelEdit {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+}
