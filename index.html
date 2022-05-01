@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css">
+    <title>ToDo List App</title>
+</head>
+<body>
+    <div id="container">
+        
+        <dialog class="modal" id="modal">
+            <form id="form" action="" method="dialog">
+
+                <div id="titleSearch">
+                    <input type="text" id="title" name="author" placeholder="title">    
+                </div>
+
+                <div id="descriptionSearch">
+                    <textarea type="text" id="description" name="description" placeholder="description"></textarea>
+                </div>
+
+                <div id="dueDate">Due Date
+                    <!-- <label for="dueDate">Due date</label> -->
+                    <input type="date" id="dueDate" name="dueDate">
+                </div>
+
+                             
+                <select id="priority">
+                    <option value="" disabled selected>Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                
+                <div id="label">
+                    <img id="label-icon" src="../src/9d87746cec08e6734c6b91f464cba6b0.svg" alt="label-icon">
+                    <input type="text" id="label" name="label" placeholder="label">
+                </div>
+                
+                <div id="buttons">
+                    <button type="button" id="submit" class="close-button">Add task</button>
+                    <button type="button" id="cancel">Cancel</button>
+                </div>
+                
+            </form>
+            
+            
+        </dialog>
+
+        <dialog class="modalEdit" id="modalEdit">
+            <form id="formEdit" action="" method="dialog">
+
+                <div id="titleSearchEdit">
+                    <input type="text" id="titleEdit" name="authorEdit" placeholder="title">    
+                </div>
+
+                <div id="descriptionSearchEdit">
+                    <textarea type="text" id="descriptionEdit" name="descriptionEdit" placeholder="description"></textarea>
+                </div>
+
+                <div id="dueDateEdit">Due Date
+                    <!-- <label for="dueDate">Due date</label> -->
+                    <input type="date" id="dueDateEdit" name="dueDateEdit">
+                </div>
+
+                             
+                <select id="priorityEdit">
+                    <option value="" disabled selected>Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                
+                <div id="labelEdit">
+                    <img id="label-icon" src="../src/9d87746cec08e6734c6b91f464cba6b0.svg" alt="label-icon">
+                    <input type="text" id="labelEdit" name="labelEdit" placeholder="label">
+                </div>
+                
+                <div id="buttonsEdit">
+                    <button type="button" id="submitEdit" class="close-buttonEdit">Edit task</button>
+                    <button type="button" id="cancelEdit">Cancel</button>
+                </div>
+                
+            </form>
+            
+            
+        </dialog>
+
+        
+        <div id="header" class="section">
+            <div id="left-header">
+                <div id="tabs">Project made by: <b>francisGolden</b></div>
+            </div>
+            <div id="center"><button id="add-task" class="open-button"><b>+</b></button></div>
+            <div id="right-header">
+                <div id="productivity">Click <b>+</b> to create a new task</div>
+            </div>
+
+        </div>
+        <div id="sidebar" class="section">
+            <b>Labels</b><br>
+        </div>
+        <div id="main" class="section">
+            <div id="todo-container">
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
